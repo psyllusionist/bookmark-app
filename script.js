@@ -47,7 +47,11 @@ function addBookmark(id) {
     closeIcon.setAttribute('title', 'Delete Bookmark');
     closeIcon.setAttribute('onclick', `deleteBookmark('${url}')`);
     //Preview
-    const previewLink = document.createElement('a');    
+    const previewLink = document.createElement('a');
+    if(!previewImg.match('images/loading.svg')) {
+        previewLink.setAttribute('href', `${url}`);
+        previewLink.setAttribute('target', '_blank');
+    }
     previewLink.classList.add('preview-link');
     const preview = document.createElement('img');
     preview.setAttribute('src', previewImg);
