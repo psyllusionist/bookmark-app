@@ -82,6 +82,10 @@ a:active {
     color: var(--secondary-color);
 }
 
+.fa-trash:hover {
+    color: var(--primary-color);
+}
+
 .name {
     margin-top: 10px;
     text-align: center;

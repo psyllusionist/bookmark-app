@@ -126,6 +126,7 @@ function getPreview(urlValue) {
             // Update 'img' Element Source, add link to the 'a' parent element and Update DOM
             if(!bookmarks[urlValue].previewImg.match('images/loading.svg')) {
                 lastElement.setAttribute('src', bookmarks[urlValue].previewImg);
+                lastElement.setAttribute('title', bookmarks[urlValue].name);
                 lastElement.parentElement.setAttribute('href', `${urlValue}`);
                 lastElement.parentElement.setAttribute('target', '_blank');
             }
